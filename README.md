@@ -4,5 +4,10 @@ Dentro de este repositorio estarán incluidos los archivos de código implementa
 
 ## Paquetes requeridos
 ```
-pip install python-tsp
+pip install matplotlib
 ```
+## Implementaciones en codigo
+
+Dentro del archivo TSP.ipynb esta la implementación del *Traveler Salesman Problem* en **Jupyter Python** a modo de ejemplo inicial.
+
+Los archivos con de formato .jl (**Julia**) son los códigos de las implementaciones de las heurísticas y metaheurísticas del informe, donde ACO.jl es para el algoritmo de colonia de hormigas, GRASP.jl para *Greedy Randomized Adaptive Search Procedure* y SA.jl para *Simulated Annealing*.
