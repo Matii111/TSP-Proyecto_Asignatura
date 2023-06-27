@@ -1,0 +1,43 @@
+\titleformat{\chapter}[display]
+    {\normalfont\Large\bfseries}{\filleft\chaptertitlename\ \thechapter}{20pt}{\Huge}
+    \chapter{TSP como problema de optimización}
+     Históricamente, se ha comprobado que existen variados y distintos métodos o enfoques para trabajar e implementar el \textit{Traveler Salesman Problem}, en la actualidad se estudia con métodos basados en inteligencia artificial, implementando algoritmos genéticos, redes neuronales, etc. De la misma forma, como se ejecutado en capítulos anteriores, las heurísticas y metaheurísticas han sido un pilar fundamental en todo el espectro de soluciones, puesto que han permitido desarrollar soluciones cada vez mejores y más cercanas al óptimo. 
+    \newline
+    \newline
+    Si bien existen varios enfoques que pueden ser aplicados para resolver en parte este gran problema, el método clásico es el enfoque de optimización. De esta manera, se pueden obtener soluciones óptimas, evaluar y comparar diferentes alternativas, incorporar restricciones adicionales e incorporar distintas herramientas de optimización, entre ellas las metaheurísticas estudias en capítulos previos, por ejemplo. 
+    \section{Caso de ejemplo}
+        Para demostrar \textbf{TSP} como problema de optimización se plantea un sencillo caso en el que hay un conjunto de 5 ciudades: \textbf{A}, \textbf{B}, \textbf{C}, \textbf{D} y \textbf{E}. Se debe encontrar la ruta más corta que visite todas las ciudades y regrese al punto de partida. Este es un caso de \textbf{TSP} simétrico, que es la manera clásica de abordar el problema. 
+        
+        \subsection{Definición de variables}            
+            Para este caso particular existe una única variable binaria, definida como \( x[i,j]\) donde \(i\) y \(j\) representan a un par de ciudades entre ambas. Al ser una variable binaria, si existe un viaje desde ciudad \(i\) a \(j\) , \(x[i,j]\) tendrá valor 1, en caso contrario será valor 0.  
+        
+        \subsection{Restricciones}
+            En primer lugar, como cada ciudad debe ser visitada una única vez, se establecen las siguientes restricciones: 
+            
+            \begin{itemize}
+                \item Para cada ciudad \(i\), la suma de las variables de entrada \(x[i,j]\) debe ser igual a 1.
+                \item Para cada ciudad \(i\), la suma de las variables de salida \(x[i,j]\) debe ser igual a 1.
+            \end{itemize}
+            
+            Para evitar la formación de subconjuntos se establece que para cada subconjunto de ciudades \(S\), la suma de las variables de salida \(x[i,j]\) para todas las ciudades \(i\) en \(S\) y todas las ciudades \(j\) fuera de \(S\) debe ser mayor o igual a 1. 
+            
+        \subsection{Función objetivo}
+            La función objetivo es minimizar la distancia total recorrida en la ruta. Mas específicamente se define como la sumatoria de las distancias \(d[i,j] * x[i,j]\) para todos los pares de ciudades \(i\) y \(j\), donde \(d[j,i]\) es la distancia entre ciudades \(i\) y \(j\). 
+
+    \section{Aplicación en Gurobi}
+        En la actualidad existen distintos métodos o herramientas para trabajar problemas de optimización, entre ellos hay \textit{softwares} como \textbf{CPLEX}, \textbf{XPress} o \textbf{Gurobi}, estas herramientas permiten resolver desde sencillos a complejos problemas de optimización, además cada uno cuenta con su propia versión de pago con opciones mas sofisticados. Para este caso se implementa \textbf{Gurobi}, pues conocido por su rendimiento y eficiencia en la resolución de problemas de optimización, además de su fácil implementación.
+        \newline
+        \newline
+        De esta manera se elabora el código documentado dentro del repositorio \parencite{Github}, dentro del resultado se muestra la solución óptima encontrada y la ruta óptima, mostrando el recorrido de ciudad a ciudad. Para este calculo se asignan distancias entre cada punto, como se muestra en \textbf{Listing 4.1}.
+        
+        \begin{center}
+            \lstinputlisting[language=Python,caption=Distancias entre puntos,frame=single,breaklines=true,columns=fullflexible]{code/recorridos.py}
+        \end{center}
+        
+        De los resultados obtenidos en \textbf{Listing 4.2} se puede concluir que la solución encontrada tiene un costo objetivo de 80 y se ha determinado como una solución óptima con una brecha de 0.00\%, a continuación se muestra la ruta óptima la cual comienza en 0 y termina en 2, pasando por todos los puntos una única vez y sin repetir, como fue requerido en un inicio.
+        
+        \begin{center}
+            \lstinputlisting[language=Python,caption=Resultados de Gurobi,frame=single,breaklines=true,columns=fullflexible]{code/resultados.py}
+        \end{center}
+
+    La aplicación en \textbf{Gurobi} a pesar de ser sencilla permite visualizar como se trabaja \textbf{TSP} con enfoque en optimización, desde la definición de variables y restricciones hasta implementar soluciones mediante \textit{softwares} como \textbf{Gurobi} generando soluciones que en este caso, son óptimas. Además al utilizar \textbf{Gurobi} se pueden obtener valores como las ruta óptima, el rendimiento y eficiencia y la estructura del modelo, entre otros elementos.

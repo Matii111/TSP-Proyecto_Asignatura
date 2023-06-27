@@ -1,0 +1,23 @@
+\documentclass{report}
+\input{format/packages.tex}
+\input{format/pageFormat.tex}
+\input{format/header.tex}
+\input{format/footer.tex}
+
+
+\addbibresource{bibliography.bib}
+
+\begin{document}
+    \include{format/frontPage.tex}         
+    \include{format/toc.tex}                
+    \include{abstract.tex}                 
+    \include{content/chapters/chapter1.tex} 
+    \include{content/chapters/chapter2.tex}
+    \include{content/chapters/chapter3.tex}
+    \include{content/chapters/chapter4.tex}
+    \include{content/chapters/chapter5.tex}
+    \include{content/conclusion.tex}         
+    \printbibliography[title=Referencias]
+    \nocite{*}
+\end{document}
+

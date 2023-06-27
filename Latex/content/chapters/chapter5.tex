@@ -1,0 +1,43 @@
+\titleformat{\chapter}[display]
+    {\normalfont\Large\bfseries}{\filleft\chaptertitlename\ \thechapter}{20pt}{\Huge}
+ \chapter{Aplicaciones en casos reales}
+    Como se ha mencionado anteriormente, el TSP es un problema involucrado en muchos y variados campos, además ha sido desarrollado con distintas metodologías y enfoques.  
+    \newline
+    \newline
+    Estos avances han permitido que hoy por hoy, se utilice TSP como una herramienta para manejar y trabajar problemáticas de alta complejidad. 
+    
+        \section{Problema de la última milla}
+        
+            Este problema involucra el comercio electrónico y la logística, de manera similar a lo planteado dentro del estudio de la metaheuristica \textbf{ACO} previamente, el problema de la última milla se utiliza para optimizar la entrega de paquetes desde un centro de distribución a múltiples destinos finales. Para este caso la “función objetivo” involucrada sería minimizar los costos de entrega. 
+            \newline
+            \newline
+            Esta problemática como se acaba de mencionar, involucra al comercio electronico y la logistica, esto debido a la cantidad de variables que se deben manejar para proponer una solucion, dichas variables aumentan considerablemente respecto al nivel urbano de la ciudad en la que se encuentre el caso.
+            \newline
+            \newline
+            Por ejemplo segun un estudio se obtiene la siguiente observación: “...se encuentra principalmente que los viajes con mayores frecuencia (semanal, diaria) están relacionados con compras en tiendas y por ende a medios como el bus y el desplazamiento a pie...”\parencite[p. 10]{ULTIMAMILLACOMPORTAMIENTOS}.
+            \newline
+            \newline
+            El estudio antes mencionado analiza en profundidad los elementos que se pueden ver involucrados en el problema de la ultima milla, en el caso específicamente señalado se demuestra como la mayoría de componentes aleatorios se deben a las tendencia humanas y a sus formas de convivencia, en tal caso una solución para esta problemática debería estar implementada en relación a la región a la que se aplica.
+            
+        \section{Ruteo de vehículos}
+        
+            En cuanto al ruteo de vehículos, se refiere a optimizar las rutas de entrega de vehículos, como camiones de reparto, servicios de mensajería o transporte público. De manera similar al caso anterior, el objetivo principal al implementar \textbf{TSP} es minimizar los recursos invertidos en realizar una entrega, estos recursos pueden ser el tiempo invertido o la distancia recorrida, por ejemplo. 
+            \newline
+            \newline
+            Dentro del ruteo de vehículo el uso de \textbf{TSP} es bastante común, además es fundamental dentro de industrias como la logística o el transporte de mercancías, esto por razones como la mencionada anteriormente, para optimizar las rutas y reducir los costos operativos, minimizar los tiempos de entrega y ahorrar combustible.
+            \newline
+            \newline
+            Por ultimo, de la misma manera que la aplicación en \textbf{Gurobi}, el ruteo de vehículos puede considerar restricciones como ventanas de tiempo que deben cumplir las entregas, limites en la capacidad de carga, o restricciones de trafico, etc.
+            
+        \section{Programación de robots}
+        
+            Para un caso con más vista al futuro está la implementación de \textbf{TSP} en robótica, en este ámbito es utilizado para planificar las trayectorias de los robots en tareas como recolección de objetos, inspección de áreas o mapeo de entornos desconocidos. 
+            \newline
+            \newline 
+            Entre las principales tareas que se deben monitorear se encuentra el control de movimiento, en esta área se deben elaborar algoritmos que planifiquen las trayectorias, la cinemática y dinámica del robot, de manera que pueda movilizarse de forma precisa y segura. La comunicación entre humano y robot, algoritmos encargados del reconocimiento de voz, detección de gestos y capacidad de respuestas a las interacciones humanas. Por ultimo, para planificación y toma de decisiones en si, este campo se podría relacionar con el ruteo de vehículos pues se debe incluir la planificación de tareas y la optimización de rutas.
+    \newline
+    \newline 
+    En definitiva, el \textbf{TSP} se ha convertido a lo largo de la historia en una nueva metodología o enfoque para resolver problemas de alto nivel. Además, se ha convertido en un elemento fundamental en el análisis de costos para la industria, por ejemplo como se menciona en capítulos pasados, el algoritmo \textbf{GRASP} suele ser utilizado en sectores productivos para definir cortes en materiales reduciendo la perdida. 
+    \newline
+    \newline 
+    De la misma manera para los casos anteriores, al menos en el \textit{problema de la ultima milla} y en \textit{ruteo de vehículos} se centran en optimizar costos, reduciendo la perdida de recursos y aumentando la ganancia, la cual puede ser representada como bienes materiales y recursos como el tiempo.
