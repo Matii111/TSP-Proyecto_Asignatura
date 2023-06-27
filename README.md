@@ -26,4 +26,4 @@ Los resultados obtenidos por las algoritmias son posteriormente analizados dentr
 Toda la información pertinente a los gráficos se encuentra almacenada dentro de la carpeta [**data_test**](https://github.com/Matii111/TSP-Proyecto_Asignatura/tree/master/Python/data_test), el significado de cada valor es explicado en profundidad dentro del informe.
 
 ## Formato del informe
-Toda la investigación esta documentada en profundidad dentro del informe elaborado mediante LaTeX, el formato del mismo esta dentro de la carpeta del mismo nombre [**Latex**]().
+Toda la investigación esta documentada en profundidad dentro del informe elaborado mediante LaTeX, el formato del mismo esta dentro de la carpeta del mismo nombre [**Latex**](https://github.com/Matii111/TSP-Proyecto_Asignatura/tree/master/Latex). El documento en formato LaTeX genera el siguiente archivo [**PDF**](https://github.com/Matii111/TSP-Proyecto_Asignatura/files/11885063/Proyecto_de_asignatura___Vendedor_viajero.pdf).
